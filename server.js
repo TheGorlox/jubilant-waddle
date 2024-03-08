@@ -21,6 +21,7 @@ app.get('/path/to/api',  (req, res) => {
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Address</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>`
@@ -29,6 +30,7 @@ app.get('/path/to/api',  (req, res) => {
             <th scope="row">${index}</th>
             <td>${entry.name}</td>
             <td>${entry.address}</td>
+            <td><button class="btn btn-danger" onclick="deleteEntry(${index})">Delete</button></td>
           </tr>`})+`
           
         </tbody>
